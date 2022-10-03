@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu.GameSelectorFragment">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/menuDrawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/animationImageViewer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vgl10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vgr10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/hgbar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:guidelineUseRtl="false"
+                app:layout_constraintGuide_percent="0.31" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/hgbar3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:guidelineUseRtl="false"
+                app:layout_constraintGuide_percent="0.54" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vgmid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <ImageButton
+                android:id="@+id/imgDrawerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@string/mainMenu_layout_description_hamburgerButton"
+                android:minHeight="48dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_menu_24" />
+
+            <ImageButton
+                android:id="@+id/settingsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@string/mainMenu_description_buttonSettings"
+                android:minHeight="48dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_settings_24" />
+
+
+            <ImageView
+                android:id="@+id/menuImgTitle"
+                android:layout_width="120dp"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/mainMenu_layout_description_ImageGameToPlay"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/dragonVTigerCard"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:cardPreventCornerOverlap="true"
+                style="@style/MenuGameLeftCardViewStyle"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/menuImgTitle"
+                app:layout_constraintLeft_toRightOf="@id/vgl10"
+                app:layout_constraintWidth_percent="0.35"
+                app:layout_constraintHeight_percent="0.16">
+
+                <ImageView
+                    android:id="@+id/imgdragonVsTiger"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:contentDescription="@string/mainMenu_layout_description_dragonTigerImg"/>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGameDragonVTiger"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/dragonVTigerCard"
+                app:layout_constraintLeft_toRightOf="@id/vgl10"
+                app:layout_constraintWidth_percent="0.35"
+                android:text="@string/mainMenu_layout_button_game_dragonTigerTitle"
+                style="@style/ButtonGameLeftButtonStyle"
+                android:backgroundTint="@color/game_button"
+                android:textStyle="bold"
+                android:textSize="11sp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/slotMachineCard"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                style="@style/MenuGameRightCardViewStyle"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/menuImgTitle"
+                app:layout_constraintRight_toLeftOf="@id/vgr10"
+                app:layout_constraintWidth_percent="0.35"
+                app:layout_constraintHeight_percent="0.16">
+
+                <ImageView
+                    android:id="@+id/imgslotMachine"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:contentDescription="@string/mainMenu_layout_description_slotMachineImg"/>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGameSlotMachine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/slotMachineCard"
+                app:layout_constraintRight_toLeftOf="@+id/vgr10"
+                app:layout_constraintWidth_percent="0.35"
+                style="@style/ButtonGameRightButtonStyle"
+                android:backgroundTint="@color/game_button"
+                android:text="@string/mainMenu_layout_button_game_slotMachineTitle"
+                android:textStyle="bold"
+                android:textSize="11sp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/colorChooserCard"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                style="@style/MenuGameLeftCardViewStyle"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/white"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/hgbar2"
+                app:layout_constraintLeft_toRightOf="@id/vgl10"
+                app:layout_constraintWidth_percent="0.35"
+                app:layout_constraintHeight_percent="0.16">
+
+                <ImageView
+                    android:id="@+id/imgcolorPrediction"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:contentDescription="@string/mainMenu_layout_description_colorPrediction"/>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGameColorPrediction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/colorChooserCard"
+                app:layout_constraintLeft_toRightOf="@id/vgl10"
+                app:layout_constraintWidth_percent="0.35"
+                style="@style/ButtonGameLeftButtonStyle"
+                android:backgroundTint="@color/game_button"
+                android:text="@string/mainMenu_layout_button_game_colorChooserTitle"
+                android:textStyle="bold"
+                android:textSize="11sp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/carRouletteCard"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                style="@style/MenuGameRightCardViewStyle"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/white"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/hgbar2"
+                app:layout_constraintRight_toLeftOf="@+id/vgr10"
+                app:layout_constraintWidth_percent="0.35"
+                app:layout_constraintHeight_percent="0.16">
+
+                <ImageView
+                    android:id="@+id/imgcarRoulette"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:contentDescription="@string/mainMenu_layout_description_carRoulette"/>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGameCarRoulette"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/carRouletteCard"
+                app:layout_constraintRight_toLeftOf="@+id/vgr10"
+                app:layout_constraintWidth_percent="0.35"
+                style="@style/ButtonGameRightButtonStyle"
+                android:backgroundTint="@color/game_button"
+                android:text="@string/mainMenu_layout_button_game_carRouletteTitle"
+                android:textStyle="bold"
+                android:textSize="11sp"/>
+
+            <ImageView
+                android:id="@+id/menuOpenImg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/mainMenu_layout_description_openImg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/vgl10"
+                app:layout_constraintRight_toLeftOf="@+id/vgr10"
+                app:layout_constraintHeight_percent="0.35"
+                app:layout_constraintWidth_percent="0.27"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            android:background="@android:color/transparent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/hgt10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.1"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/vgt5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.05"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/usernameCardView"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/hgt10"
+                    app:layout_constraintLeft_toRightOf="@id/vgt5"
+                    app:cardBackgroundColor="@color/light_blue_600"
+                    style="@style/UserNameCardViewStyle">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/usernameLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMenuWallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:backgroundTint="@color/white"
+                    android:drawableStart="@drawable/ic_baseline_attach_money_24"
+                    android:text="@string/mainMenu_layout_button_walletTitle"
+                    android:textColor="@color/drawer_menu_button_label"
+                    android:textSize="16sp"
+                    app:cornerRadius="30dp"
+                    app:layout_constraintLeft_toRightOf="@id/vgt5"
+                    app:layout_constraintTop_toBottomOf="@id/usernameCardView"
+                    app:strokeColor="@color/black" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMenuContactUs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="@color/white"
+                    android:drawableStart="@drawable/ic_baseline_contact_support_24"
+                    android:text="@string/mainMenu_layout_button_contactTitle"
+                    android:textColor="@color/drawer_menu_button_label"
+                    android:textSize="16sp"
+                    app:cornerRadius="30dp"
+                    app:layout_constraintLeft_toRightOf="@id/vgt5"
+                    app:layout_constraintTop_toBottomOf="@id/btnMenuWallet"
+                    app:strokeColor="@color/black" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMenuPrivacyPolicy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="@color/white"
+                    android:drawableStart="@drawable/ic_baseline_info_24"
+                    android:text="@string/mainMenu_layout_button_policyTitle"
+                    android:textColor="@color/drawer_menu_button_label"
+                    android:textSize="16sp"
+                    app:cornerRadius="30dp"
+                    app:layout_constraintLeft_toRightOf="@id/vgt5"
+                    app:layout_constraintTop_toBottomOf="@id/btnMenuContactUs"
+                    app:strokeColor="@color/black" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMenuAboutUs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="@color/white"
+                    android:drawableStart="@drawable/ic_baseline_menu_book_24"
+                    android:text="@string/mainMenu_layout_button_aboutUsTitle"
+                    android:textColor="@color/drawer_menu_button_label"
+                    android:textSize="16sp"
+                    app:cornerRadius="30dp"
+                    app:layout_constraintLeft_toRightOf="@id/vgt5"
+                    app:layout_constraintTop_toBottomOf="@id/btnMenuPrivacyPolicy"
+                    app:strokeColor="@color/black" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMenuRefund"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="@color/white"
+                    android:drawableStart="@drawable/ic_baseline_videogame_asset_24"
+                    android:text="@string/mainMenu_layout_button_refundTitle"
+                    android:textColor="@color/drawer_menu_button_label"
+                    android:textSize="16sp"
+                    app:cornerRadius="30dp"
+                    app:layout_constraintLeft_toRightOf="@id/vgt5"
+                    app:layout_constraintTop_toBottomOf="@id/btnMenuAboutUs"
+                    app:strokeColor="@color/black" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMenuLogOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="@color/white"
+                    android:drawableStart="@drawable/ic_baseline_exit_to_app_24"
+                    android:text="@string/mainMenu_layout_button_logOutTitle"
+                    android:textColor="@color/drawer_menu_button_label"
+                    android:textSize="16sp"
+                    app:cornerRadius="30dp"
+                    app:layout_constraintLeft_toRightOf="@id/vgt5"
+                    app:layout_constraintTop_toBottomOf="@id/btnMenuRefund"
+                    app:strokeColor="@color/black" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</FrameLayout>

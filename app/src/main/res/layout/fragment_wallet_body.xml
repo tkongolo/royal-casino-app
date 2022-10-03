@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".Menu.wallet.WalletBodyFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/amountCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            app:cardBackgroundColor="@color/button_wallet_grey"
+            android:layout_marginEnd="2dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/card_stroke_walletBal"
+            style="@style/WalletBalCardViewStyle">
+
+            <TextView
+                android:id="@+id/amountVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:text="@string/wallet_layout_balancePlaceHolder"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/buyButtonLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/amountCard"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textColor="@color/white"
+            android:layout_marginStart="20dp"
+            android:text="@string/wallet_layout_buyCoinLabel"/>
+
+        <!--Amount Buttons-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAmt50"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/buyButtonLabel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btnAmt100"
+            android:backgroundTint="@color/button_wallet_grey"
+            android:textColor="@color/white"
+            app:cornerRadius="50dp"
+            android:text="@string/wallet_layout_btnAmt50"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAmt100"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/buyButtonLabel"
+            app:layout_constraintLeft_toRightOf="@id/btnAmt50"
+            app:layout_constraintRight_toLeftOf="@id/btnAmt200"
+            android:backgroundTint="@color/button_wallet_grey"
+            android:textColor="@color/white"
+            app:cornerRadius="30dp"
+            android:text="@string/wallet_layout_btnAmt100"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAmt200"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/buyButtonLabel"
+            app:layout_constraintLeft_toRightOf="@id/btnAmt100"
+            app:layout_constraintRight_toRightOf="parent"
+            android:backgroundTint="@color/button_wallet_grey"
+            android:textColor="@color/white"
+            app:cornerRadius="30dp"
+            android:text="@string/wallet_layout_btnAmt200"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAmt500"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/btnAmt50"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btnAmt1000"
+            android:backgroundTint="@color/button_wallet_grey"
+            android:textColor="@color/white"
+            app:cornerRadius="30dp"
+            android:text="@string/wallet_layout_btnAmt500"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAmt1000"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/btnAmt100"
+            app:layout_constraintLeft_toRightOf="@id/btnAmt500"
+            app:layout_constraintRight_toLeftOf="@id/btnAmt2000"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/button_wallet_grey"
+            android:textColor="@color/white"
+            app:cornerRadius="30dp"
+            android:text="@string/wallet_layout_btnAmt1000"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAmt2000"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/btnAmt200"
+            app:layout_constraintLeft_toRightOf="@id/btnAmt1000"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/button_wallet_grey"
+            android:textColor="@color/white"
+            app:cornerRadius="30dp"
+            android:text="@string/wallet_layout_btnAmt2000"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAmt5000"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/btnAmt500"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btnAmt10000"
+            android:backgroundTint="@color/button_wallet_grey"
+            android:textColor="@color/white"
+            app:cornerRadius="30dp"
+            android:text="@string/wallet_layout_btnAmt5000"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAmt10000"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/btnAmt1000"
+            app:layout_constraintLeft_toRightOf="@id/btnAmt5000"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/button_wallet_grey"
+            android:textColor="@color/white"
+            app:cornerRadius="30dp"
+            android:text="@string/wallet_layout_btnAmt10000"/>
+
+        <TextView
+            android:id="@+id/withdrawLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/btnAmt5000"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/wallet_layout_withdrawCoinLabel"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/withdrawAmountField"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.70"
+            android:hint="@string/wallet_layout_hint_amtWithdraw"
+            app:hintTextColor="@color/white"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/withdrawLabel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnWithdrawAmt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.7"
+            app:layout_constraintTop_toBottomOf="@id/withdrawAmountField"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@string/wallet_layout_btnWithdrawLabel"
+            android:fontFamily="@font/allura"
+            android:textSize="30sp"
+            app:cornerRadius="30dp"
+            android:backgroundTint="@color/game_button"
+            android:textColor="@color/red"/>
+
+        <TextView
+            android:id="@+id/inviteMsgLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/btnWithdrawAmt"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="20dp"
+            android:text="@string/wallet_layout_inviteFriendsLabel"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/inviteMsgLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:layout_constraintTop_toBottomOf="@id/inviteMsgLabel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@string/wallet_layout_inviteLinkLabel"
+            android:textSize="40sp"
+            android:textColor="@color/teal_700"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</ScrollView>

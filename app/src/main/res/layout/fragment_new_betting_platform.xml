@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Games.NewBettingPlatformFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/coinSelectorLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <ImageView
+            android:id="@+id/coinSelectorBackButton"
+            android:layout_width="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24"/>
+
+        <HorizontalScrollView
+            android:id="@+id/coinScrollView"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            app:layout_constraintLeft_toRightOf="@id/coinSelectorBackButton"
+            app:layout_constraintRight_toLeftOf="@id/coinSelectorForwardButton">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgCoin10"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="@string/game_coin10_description"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_coin_10"/>
+                <ImageView
+                    android:id="@+id/imgCoin20"
+                    android:contentDescription="@string/game_coin20_description"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_coin_20"/>
+                <ImageView
+                    android:id="@+id/imgCoin50"
+                    android:contentDescription="@string/game_coin50_description"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_coin_50"/>
+                <ImageView
+                    android:id="@+id/imgCoin100"
+                    android:contentDescription="@string/game_coin100_description"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_coin_100"/>
+                <ImageView
+                    android:id="@+id/imgCoin500"
+                    android:contentDescription="@string/game_coin500_description"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_coin_500"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <ImageView
+            android:id="@+id/coinSelectorForwardButton"
+            android:layout_width="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imgCancel"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:contentDescription="@string/game_CancelBet_description"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toRightOf="@id/coinSelectorLayout"
+        app:layout_constraintRight_toLeftOf="@id/imgCoinDeal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_cancel_24" />
+
+    <ImageView
+        android:id="@+id/imgCoinDeal"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:contentDescription="@string/game_coinDeal_description"
+        android:scaleType="fitXY"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_coin_deal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

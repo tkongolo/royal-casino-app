@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/main_menu_loop1" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop2" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop3" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop4" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop5" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop6" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop7" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop8" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop9" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop10" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop11" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop12" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop13" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop14" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop15" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop16" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop17" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop18" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop19" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop20" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop21" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop22" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop23" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop24" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop25" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop26" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop27" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop28" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop29" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop30" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop31" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop32" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop33" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop34" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop35" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop36" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop37" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop38" android:duration="200" />
+    <item android:drawable="@drawable/main_menu_loop39" android:duration="200" />
+</animation-list>

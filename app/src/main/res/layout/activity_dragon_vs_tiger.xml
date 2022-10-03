@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color_selector"
+    android:theme="@style/ThemeOverlay.Royal_Casino.FullscreenContainer"
+    tools:context=".Games.DragonVTiger.DragonVsTigerActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRecharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:backgroundTint="@color/button_wallet_grey"
+            android:layout_marginRight="20dp"
+            app:cornerRadius="30dp"
+            android:textSize="11sp"
+            android:text="@string/color_selector_layout_btn_recharge"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRules"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/btnRecharge"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:backgroundTint="@color/card_stroke_walletBal"
+            app:cornerRadius="30dp"
+            android:layout_marginRight="20dp"
+            android:textSize="11sp"
+            android:text="@string/color_selector_layout_btn_rules"/>
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/game_backButton_description"
+            android:scaleType="fitXY"
+            android:rotation="270"
+            android:backgroundTint="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:srcCompat="@drawable/ic_game_back_button"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/playerInfoCardView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHeight_percent="0.25"
+            style="@style/GameSemiTopCardViewStyle"
+            app:cardPreventCornerOverlap="false"
+            app:cardBackgroundColor="@color/background_panel_dragonVTiger_playerInfo"
+            app:layout_constraintWidth_percent="0.5">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/availableBalanceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:text="@string/dragon_v_tiger_layout_availableBalance"/>
+
+                <TextView
+                    android:id="@+id/betBalanceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/availableBalanceText"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:text="@string/dragon_v_tiger_layout_betAmount"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/dragonTigerSelectPanel"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintWidth_percent="0.6"
+            app:layout_constraintHeight_percent="0.5"
+            app:cardBackgroundColor="@color/background_panel_dragonVTiger"
+            app:cardCornerRadius="50dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/dragonCardView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="0dp"
+                    style="@style/GameLeftDragonCardViewStyle"
+                    app:layout_constraintWidth_percent="0.35">
+
+                    <ImageView
+                        android:id="@+id/imgDragon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:contentDescription="@string/dragon_v_tiger_layout_descriptionDragon"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/drawCardView"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="@color/background_panel_dragonVTiger_draw"
+                    app:layout_constraintLeft_toRightOf="@id/dragonCardView"
+                    app:layout_constraintRight_toLeftOf="@id/tigerCardView"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="0dp">
+
+                    <ImageView
+                        android:id="@+id/imgDragonTiger"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:contentDescription="@string/dragon_v_tiger_layout_descriptionDrawDragonTiger"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/tigerCardView"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintWidth_percent="0.35"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="0dp"
+                    style="@style/GameRightTigerCardViewStyle">
+
+                    <ImageView
+                        android:id="@+id/imgTiger"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:contentDescription="@string/dragon_v_tiger_layout_descriptionTiger"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bettingRegion"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintWidth_percent="0.6">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/bettingPlatformFragment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintWidth_percent="0.6"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

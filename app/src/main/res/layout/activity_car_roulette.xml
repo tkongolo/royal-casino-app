@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color_selector"
+    android:theme="@style/ThemeOverlay.Royal_Casino.FullscreenContainer"
+    tools:context=".Games.CarRoulette.CarRouletteActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRecharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:backgroundTint="@color/button_wallet_grey"
+            android:layout_marginRight="20dp"
+            app:cornerRadius="30dp"
+            android:textSize="11sp"
+            android:text="@string/color_selector_layout_btn_recharge"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRules"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btnRecharge"
+            android:backgroundTint="@color/card_stroke_walletBal"
+            app:cornerRadius="30dp"
+            android:layout_marginRight="20dp"
+            android:textSize="11sp"
+            android:text="@string/color_selector_layout_btn_rules"/>
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:contentDescription="@string/game_backButton_description"
+            android:scaleType="fitXY"
+            android:rotation="270"
+            android:backgroundTint="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:srcCompat="@drawable/ic_game_back_button"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/parentCarRoulette"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="45dp"
+            app:layout_constraintWidth_percent="0.7"
+            app:layout_constraintHeight_percent="0.7"
+            android:backgroundTint="@android:color/transparent"
+            app:strokeWidth="3dp"
+            app:cardCornerRadius="100dp"
+            app:strokeColor="@color/banana_yellow">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--Roulette section-->
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="12dp"
+                    android:elevation="1dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="40dp"
+                    android:elevation="1dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    app:layout_constraintBottom_toTopOf="@id/innerCarRoulette"
+                    app:layout_constraintLeft_toRightOf="@id/imgCar2"
+                    app:layout_constraintRight_toLeftOf="@+id/imgCar4"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar4"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    app:layout_constraintBottom_toTopOf="@id/innerCarRoulette"
+                    app:layout_constraintLeft_toRightOf="@id/imgCar3"
+                    app:layout_constraintRight_toLeftOf="@+id/imgCar5"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar5"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    app:layout_constraintBottom_toTopOf="@id/innerCarRoulette"
+                    app:layout_constraintLeft_toRightOf="@id/imgCar4"
+                    app:layout_constraintRight_toLeftOf="@+id/imgCar6"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar6"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    app:layout_constraintBottom_toTopOf="@id/innerCarRoulette"
+                    app:layout_constraintLeft_toRightOf="@id/imgCar5"
+                    app:layout_constraintRight_toLeftOf="@+id/imgCar7"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar7"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    app:layout_constraintBottom_toTopOf="@id/innerCarRoulette"
+                    app:layout_constraintLeft_toRightOf="@id/imgCar6"
+                    app:layout_constraintRight_toLeftOf="@+id/imgCar8"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar8"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    app:layout_constraintBottom_toTopOf="@id/innerCarRoulette"
+                    app:layout_constraintLeft_toRightOf="@id/imgCar7"
+                    app:layout_constraintRight_toLeftOf="@+id/imgCar9"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar9"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    app:layout_constraintBottom_toTopOf="@id/innerCarRoulette"
+                    app:layout_constraintLeft_toRightOf="@id/imgCar8"
+                    app:layout_constraintRight_toLeftOf="@+id/imgCar10"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar10"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    app:layout_constraintBottom_toTopOf="@id/innerCarRoulette"
+                    app:layout_constraintLeft_toRightOf="@id/imgCar9"
+                    app:layout_constraintRight_toLeftOf="@+id/imgCar11"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar11"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    app:layout_constraintBottom_toTopOf="@id/innerCarRoulette"
+                    app:layout_constraintLeft_toRightOf="@id/imgCar10"
+                    app:layout_constraintRight_toLeftOf="@+id/imgCar12"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar12"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    app:layout_constraintBottom_toTopOf="@id/innerCarRoulette"
+                    app:layout_constraintLeft_toRightOf="@id/imgCar11"
+                    app:layout_constraintRight_toLeftOf="@+id/imgCar13"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar13"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="43dp"
+                    android:elevation="1dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar14"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="18dp"
+                    android:elevation="1dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar15"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="60dp"
+                    android:elevation="1dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/imgCar16"
+                    app:layout_constraintLeft_toRightOf="@+id/innerCarRoulette"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar16"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginBottom="60dp"
+                    android:elevation="1dp"
+                    app:layout_constraintTop_toBottomOf="@id/imgCar15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/innerCarRoulette"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar17"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginRight="18dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar18"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="43dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar19"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    app:layout_constraintTop_toBottomOf="@+id/innerCarRoulette"
+                    app:layout_constraintRight_toLeftOf="@+id/imgCar18"
+                    app:layout_constraintLeft_toRightOf="@+id/imgCar20"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar20"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    app:layout_constraintTop_toBottomOf="@+id/innerCarRoulette"
+                    app:layout_constraintRight_toLeftOf="@+id/imgCar19"
+                    app:layout_constraintLeft_toRightOf="@+id/imgCar21"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar21"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    app:layout_constraintTop_toBottomOf="@+id/innerCarRoulette"
+                    app:layout_constraintRight_toLeftOf="@+id/imgCar20"
+                    app:layout_constraintLeft_toRightOf="@+id/imgCar22"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar22"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    app:layout_constraintTop_toBottomOf="@+id/innerCarRoulette"
+                    app:layout_constraintRight_toLeftOf="@+id/imgCar21"
+                    app:layout_constraintLeft_toRightOf="@+id/imgCar23"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar23"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    app:layout_constraintTop_toBottomOf="@+id/innerCarRoulette"
+                    app:layout_constraintRight_toLeftOf="@+id/imgCar22"
+                    app:layout_constraintLeft_toRightOf="@+id/imgCar24"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar24"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    app:layout_constraintTop_toBottomOf="@+id/innerCarRoulette"
+                    app:layout_constraintRight_toLeftOf="@+id/imgCar23"
+                    app:layout_constraintLeft_toRightOf="@+id/imgCar25"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar25"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    app:layout_constraintTop_toBottomOf="@+id/innerCarRoulette"
+                    app:layout_constraintRight_toLeftOf="@+id/imgCar24"
+                    app:layout_constraintLeft_toRightOf="@+id/imgCar26"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar26"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    app:layout_constraintTop_toBottomOf="@+id/innerCarRoulette"
+                    app:layout_constraintRight_toLeftOf="@+id/imgCar25"
+                    app:layout_constraintLeft_toRightOf="@+id/imgCar27"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar27"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    app:layout_constraintTop_toBottomOf="@+id/innerCarRoulette"
+                    app:layout_constraintRight_toLeftOf="@+id/imgCar26"
+                    app:layout_constraintLeft_toRightOf="@+id/imgCar28"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar28"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    app:layout_constraintTop_toBottomOf="@+id/innerCarRoulette"
+                    app:layout_constraintRight_toLeftOf="@+id/imgCar27"
+                    app:layout_constraintLeft_toRightOf="@+id/imgCar29"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar29"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="40dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar30"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginLeft="18dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar31"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    android:layout_marginBottom="60dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/innerCarRoulette"
+                    app:layout_constraintTop_toBottomOf="@+id/imgCar32"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/imgCar32"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:elevation="1dp"
+                    android:layout_marginTop="60dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/innerCarRoulette"
+                    app:layout_constraintBottom_toTopOf="@+id/imgCar31"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/innerCarRoulette"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="25dp"
+                    app:strokeWidth="3dp"
+                    app:strokeColor="@color/black"
+                    app:cardCornerRadius="80dp"
+                    android:backgroundTint="@android:color/transparent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/regionPlayerInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:background="@color/car_roulette_by5"
+                            app:layout_constraintHeight_percent="0.2">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/availableBalanceRegion"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintWidth_percent="0.5">
+
+                                <TextView
+                                    android:id="@+id/availableBalanceTitleText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:text="@string/color_selector_layout_title_availableBalance"/>
+                                <TextView
+                                    android:id="@+id/availableBalanceText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintTop_toBottomOf="@id/availableBalanceTitleText"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:text="@string/color_selector_layout_testAmount"/>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/betBalanceRegion"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toRightOf="@id/availableBalanceRegion"
+                                app:layout_constraintWidth_percent="0.5">
+
+                                <TextView
+                                    android:id="@+id/betBalanceText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    android:textColor="@color/white"
+                                    android:text="@string/dragon_v_tiger_layout_betAmount"/>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/regionCarBet10"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toBottomOf="@id/regionPlayerInfo"
+                            app:layout_constraintHeight_percent="0.4">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/maseratiPane"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                android:backgroundTint="@color/car_roulette_by10"
+                                app:strokeColor="@color/black"
+                                app:strokeWidth="3dp"
+                                style="@style/GameCarRouletteLeftMaseratiCardViewStyle"
+                                app:layout_constraintWidth_percent="0.25">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent">
+
+                                        <ImageView
+                                            android:id="@+id/imgMaserati"
+                                            android:layout_width="30dp"
+                                            android:layout_height="40dp"
+                                            android:scaleType="fitXY"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintLeft_toLeftOf="parent"
+                                            app:srcCompat="@drawable/ic_maserati"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:layout_constraintLeft_toRightOf="@+id/imgMaserati"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:text="@string/car_roulette_layout_by10"
+                                            android:textColor="@color/car_roulette_by10Title"
+                                            android:textSize="20sp"/>
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/ferrariPane"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toRightOf="@+id/maseratiPane"
+                                android:backgroundTint="@color/car_roulette_by10"
+                                app:strokeWidth="3dp"
+                                app:strokeColor="@color/black"
+                                app:layout_constraintWidth_percent="0.25">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent">
+
+                                        <ImageView
+                                            android:id="@+id/imgFerrari"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:scaleType="fitXY"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintLeft_toLeftOf="parent"
+                                            app:srcCompat="@drawable/ic_ferrari"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:layout_constraintLeft_toRightOf="@+id/imgFerrari"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:text="@string/car_roulette_layout_by10"
+                                            android:textColor="@color/car_roulette_by10Title"
+                                            android:textSize="20sp"/>
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/lamborghiniPane"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toRightOf="@+id/ferrariPane"
+                                android:backgroundTint="@color/car_roulette_by10"
+                                app:strokeColor="@color/black"
+                                app:strokeWidth="3dp"
+                                app:layout_constraintWidth_percent="0.25">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent">
+
+                                        <ImageView
+                                            android:id="@+id/imgLamborghini"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:scaleType="fitXY"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintLeft_toLeftOf="parent"
+                                            app:srcCompat="@drawable/ic_lamborghini"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:layout_constraintLeft_toRightOf="@+id/imgLamborghini"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:text="@string/car_roulette_layout_by10"
+                                            android:textColor="@color/car_roulette_by10Title"
+                                            android:textSize="20sp"/>
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/porschePane"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toRightOf="@id/lamborghiniPane"
+                                android:backgroundTint="@color/car_roulette_by10"
+                                app:strokeWidth="3dp"
+                                app:strokeColor="@color/black"
+                                style="@style/GameCarRouletteRightPorscheCardViewStyle"
+                                app:layout_constraintWidth_percent="0.25">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent">
+
+                                        <ImageView
+                                            android:id="@+id/imgPorsche"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:scaleType="fitXY"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintLeft_toLeftOf="parent"
+                                            app:srcCompat="@drawable/ic_porsche"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:layout_constraintLeft_toRightOf="@+id/imgPorsche"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:text="@string/car_roulette_layout_by10"
+                                            android:textColor="@color/car_roulette_by10Title"
+                                            android:textSize="20sp"/>
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/regionCarBet5"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            app:layout_constraintTop_toBottomOf="@id/regionCarBet10"
+                            app:layout_constraintHeight_percent="0.4">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/bmwPane"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintWidth_percent="0.25"
+                                style="@style/GameCarRouletteLeftBMWCardViewStyle"
+                                android:backgroundTint="@color/car_roulette_by5"
+                                app:strokeColor="@color/black"
+                                app:strokeWidth="3dp">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent">
+
+                                        <ImageView
+                                            android:id="@+id/imgBMW"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:scaleType="fitXY"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintLeft_toLeftOf="parent"
+                                            app:srcCompat="@drawable/ic_bmw"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:layout_constraintLeft_toRightOf="@+id/imgBMW"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:text="@string/car_roulette_layout_by5"
+                                            android:textColor="@color/car_roulette_by5Title"
+                                            android:textSize="20sp"/>
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/benzPane"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toRightOf="@+id/bmwPane"
+                                android:backgroundTint="@color/car_roulette_by5"
+                                app:strokeWidth="3dp"
+                                app:strokeColor="@color/black"
+                                app:layout_constraintWidth_percent="0.25">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent">
+
+                                        <ImageView
+                                            android:id="@+id/imgBenz"
+                                            android:layout_width="40dp"
+                                            android:layout_height="30dp"
+                                            android:scaleType="fitXY"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintLeft_toLeftOf="parent"
+                                            app:srcCompat="@drawable/ic_benz"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:layout_constraintLeft_toRightOf="@+id/imgBenz"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:text="@string/car_roulette_layout_by5"
+                                            android:textColor="@color/car_roulette_by5Title"
+                                            android:textSize="20sp"/>
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/jaguarPane"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toRightOf="@+id/benzPane"
+                                android:backgroundTint="@color/car_roulette_by5"
+                                app:strokeColor="@color/black"
+                                app:strokeWidth="3dp"
+                                app:layout_constraintWidth_percent="0.25">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent">
+
+                                        <ImageView
+                                            android:id="@+id/imgJaguar"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:scaleType="fitXY"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintLeft_toLeftOf="parent"
+                                            app:srcCompat="@drawable/ic_jaguar"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:layout_constraintLeft_toRightOf="@+id/imgJaguar"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:text="@string/car_roulette_layout_by5"
+                                            android:textColor="@color/car_roulette_by5Title"
+                                            android:textSize="20sp"/>
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/landroverPane"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toRightOf="@+id/jaguarPane"
+                                app:layout_constraintWidth_percent="0.25"
+                                android:backgroundTint="@color/car_roulette_by5"
+                                style="@style/GameCarRouletteRightLandRoverCardViewStyle"
+                                app:strokeWidth="3dp"
+                                app:strokeColor="@color/black">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent">
+
+                                        <ImageView
+                                            android:id="@+id/imgLandrover"
+                                            android:layout_width="40dp"
+                                            android:layout_height="20dp"
+                                            android:scaleType="fitXY"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintLeft_toLeftOf="parent"
+                                            app:srcCompat="@drawable/ic_landrover"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:layout_constraintLeft_toRightOf="@+id/imgLandrover"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:text="@string/car_roulette_layout_by5"
+                                            android:textColor="@color/car_roulette_by5Title"
+                                            android:textSize="20sp"/>
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bettingRegion"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintWidth_percent="0.6">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/bettingPlatformFragment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintWidth_percent="0.7"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

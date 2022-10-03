@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@+id/dragon_v_tiger_gameResultImg"
+        android:contentDescription="@string/dragon_v_tiger_layout_descriptionDialogWinner"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/dragon_v_tiger_gameResultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/dragon_v_tiger_gameResultImg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/white"
+        android:textSize="40sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

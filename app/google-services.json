@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "170502730582",
+    "project_id": "royal-casino-c764b",
+    "storage_bucket": "royal-casino-c764b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170502730582:android:966b8d626f315954e8dcf7",
+        "android_client_info": {
+          "package_name": "in.co.royal_casino"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "170502730582-1351gpk5p1adsjtdvke2mdnhatk9qp4i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvENSnu8YSFFAfQqM8KSxWTjO9fc_Xb6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "170502730582-1351gpk5p1adsjtdvke2mdnhatk9qp4i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_cardicon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_cardicon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Royal_Casino"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".Menu.wallet.WebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Games.CarRoulette.CarRouletteActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.Royal_Casino.Fullscreen" />
+        <activity
+            android:name=".Games.ColorSelector.ColorSelectorActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:label="@string/title_activity_color_selector"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Royal_Casino.Fullscreen" />
+        <activity
+            android:name=".Games.DragonVTiger.DragonVsTigerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:label="@string/title_activity_dragon_vs_tiger"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.Royal_Casino.Fullscreen" />
+        <activity
+            android:name=".Menu.refund.RefundActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Menu.aboutUs.AboutUsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Menu.privacyPolicy.PrivacyPolicyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Menu.contactUs.ContactUsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Menu.wallet.WalletActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Menu.MainMenuActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main_menu"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Royal_Casino.NoActionBar" />
+        <activity
+            android:name=".LoginRegister.LoginRegisterActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="royalcasinoin3.page.link"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Utilities.Activities.SettingsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings" />
+        <service
+            android:name=".Utilities.Services.GameMusicService"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="true">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_vsCSBoRzTv4ePs" />
+
+        <service
+            android:name=".MessageNotificationService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

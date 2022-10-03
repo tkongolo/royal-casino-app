@@ -1,0 +1,340 @@
+<resources>
+    <string name="app_name">Royal Casino</string>
+
+    <!--BUSINESS_LOGIC-->
+    <!--Firebase dynamic links-->
+    <string name="fbase_dlink">royalcasinoin3.page.link</string>
+    <string name="fbase_dlink_uri">https://royalcasinoin3.page.link</string>
+    <string name="fbase_main_link">https://royal-casino-c764b.web.app/?invitedBy={{user}}</string>
+    <string name="fbase_fallback_link">https://royal-casino-c764b.web.app/apk/download</string>
+    <string name="fbase_dlink_android_pkgName">in.co.royal_casino</string>
+    <string name="fbase_dlink_promo_title">Invite Promotion</string>
+    <string name="fbase_dlink_promo_content">Get 50 coins for every invite</string>
+
+    <!--Games-->
+    <string name="game_slotMachine">slot machine</string>
+    <string name="game_dragonVTiger">dragon vs tiger</string>
+    <string name="game_carRoulette">car roulette</string>
+    <string name="game_colorPrediction">color prediction</string>
+    <!--TAGS-->
+    <string name="tag_viewmodel_gamemodel">GameViewModels</string>
+    <string name="tag_activity_gameactivity">GameActivity</string>
+    <string name="tag_activity_carrrouletteactivity">CarRouletteActivity</string>
+    <string name="tag_activity_colorselectoractivity">ColorSelectorActivity</string>
+    <string name="tag_activity_dragonvtigeractivity">DragonVsTigerActivity</string>
+
+    <!--GAME_ALL-->
+    <string name="game_backButton_description">Image Button that goes back</string>
+    <string name="game_leftButton_description">Left Button</string>
+    <string name="game_rightButton_description">Right Button</string>
+    <string name="game_scrollview_description">Scrollview selector</string>
+    <string name="game_coin10_description">Coin 10</string>
+    <string name="game_coin20_description">Coin 20</string>
+    <string name="game_coin50_description">Coin 50</string>
+    <string name="game_coin100_description">Coin 100</string>
+    <string name="game_coin500_description">Coin 500</string>
+    <string name="game_coinDeal_description">Coin Deal</string>
+    <string name="game_selectedCoin_description">Selected Coin</string>
+    <string name="game_CancelBet_description">Cancel Bet Image</string>
+    <string name="game_bet_wait_description">Bet animation</string>
+    <string name="game_result_win">YOU WIN!!!</string>
+    <string name="game_result_amtNotEnough">YOU DO NOT HAVE ENOUGH COINS!!!</string>
+    <string name="game_message_selectCoinBet">SELECT COINS FOR THE BET</string>
+    <string name="game_message_selectBet">SELECT A BET</string>
+    <string name="game_message_completeBet">COMPLETE THE BET</string>
+    <string name="game_winningFiller">Win: {{amt}}</string>
+    <string name="game_drawFiller">Draw: {{amt}}</string>
+
+    <!--GAME COLOR SELECTOR-->
+    <string name="color_selector_layout_title_availableBalance">Available Balance</string>
+    <string name="color_selector_layout_testAmount">0.0000</string>
+    <string name="color_selector_layout_btn_recharge">Recharge</string>
+    <string name="color_selector_layout_btn_rules">Rules</string>
+    <string name="color_selector_layout_testBetAmount">BET: 0</string>
+    <string name="color_selector_layout_btn_greenButton">Green</string>
+    <string name="color_selector_layout_btn_violetButton">Violet</string>
+    <string name="color_selector_layout_btn_redButton">Red</string>
+    <string name="color_selector_layout_title_Period">Period</string>
+    <string name="color_selector_layout_title_Selection">Selection</string>
+    <string name="color_selector_layout_title_Result">Result</string>
+    <string name="color_selector_layout_btn1">1</string>
+    <string name="color_selector_layout_btn2">2</string>
+    <string name="color_selector_layout_btn3">3</string>
+    <string name="color_selector_layout_btn4">4</string>
+    <string name="color_selector_layout_btn5">5</string>
+    <string name="color_selector_layout_btn6">6</string>
+    <string name="color_selector_layout_btn7">7</string>
+    <string name="color_selector_layout_btn8">8</string>
+    <string name="color_selector_layout_btn9">9</string>
+    <string name="color_selector_layout_btn0">0</string>
+
+    <!--DRAGON VS TIGER-->
+    <string name="dragon_v_tiger_layout_descriptionTiger">Tiger Image</string>
+    <string name="dragon_v_tiger_layout_descriptionDragon">Dragon Image</string>
+    <string name="dragon_v_tiger_layout_descriptionDrawDragonTiger">Dragon and Tiger Image</string>
+    <string name="dragon_v_tiger_layout_availableBalance">Available Balance: 0.0000</string>
+    <string name="dragon_v_tiger_layout_availableBalanceFiller">Available Balance: {{amt}}</string>
+    <string name="dragon_v_tiger_layout_betAmount">Bet: 0</string>
+    <string name="dragon_v_tiger_layout_betAmountFiller">Bet: {{amt}}</string>
+    <string name="dragon_v_tiger_layout_descriptionDialogWinner">Game Winner</string>
+    <string name="dragon_v_tiger_message_dragonWin">DRAGON WINS!!!</string>
+    <string name="dragon_v_tiger_message_tigerWin">TIGER WINS!!!</string>
+    <string name="dragon_v_tiger_message_draw">IT IS A DRAW!!!</string>
+    <string name="dragon_v_tiger_error_alreadyChosen">YOU HAVE ALREADY SELECTED A CHOICE</string>
+
+    <!--CAR ROULETTE-->
+    <string name="car_roulette_layout_by10">x10</string>
+    <string name="car_roulette_layout_by5">x5</string>
+
+    <string name="game_transaction_Win">win</string>
+    <string name="game_transaction_Lose">lose</string>
+
+    <!--LOG_MESSAGES-->
+    <string name="LOG_MSG_ERR_internalError">Internal Error:</string>
+    <string name="LOG_MSG_ERR_errTokMapping">Error mapping respective tokens</string>
+
+    <string name="dialog_error_title_noInternet">Error! Network not available</string>
+
+    <!--API_MESSAGES-->
+    <string name="API_MSG_noPlayer">Player not found</string>
+    <string name="API_MSG_phoneAlreadyExists">Phone no already registered</string>
+    <string name="API_MSG_badRequest">Bad Request</string>
+    <string name="API_MSG_internalServerErr">Internal server error</string>
+    <string name="API_MSG_unauthorized">Unauthorized access</string>
+    <string name="API_MSG_success">Success</string>
+    <string name="API_MSG_noResponse">No response</string>
+    <string name="API_MSG_unknownError">Unknown Error</string>
+    <string name="API_MSG_FORBIDDEN_Game">Action or game not recognized</string>
+    <string name="API_MSG_FORBIDDEN_Main">Action not recognized</string>
+    <string name="API_MSG_FORBIDDEN_Doc">Document type not recognized</string>
+    <string name="API_MSG_SUCCESS_refundRequest">Refund request successful</string>
+
+    <!--Channels-->
+    <string name="channel_messages">Messages</string>
+
+    <!--UI-->
+    <string name="dialog_positiveButton_Topup">TopUp</string>
+    <string name="dialog_positiveButton_Withdraw">Withdraw</string>
+    <string name="dialog_positiveButton_OK">Ok</string>
+    <string name="dialog_positiveButton_Register">Register</string>
+    <string name="dialog_negativeButton_Cancel">Cancel</string>
+    <string name="dialog_title_Confirmation">Confirmation</string>
+    <string name="dialog_title_Success">Success!</string>
+    <string name="snackbar_button_reload">RELOAD</string>
+    <string name="snackbar_title_amountNotReloaded">Amount not updated</string>
+    <string name="dialog_title_sessionExpired">Session Expired</string>
+    <string name="dialog_content_sessionExpired">Your session has expired. Please log in again</string>
+
+    <!--DIALOG PROCESS-->
+    <string name="dialogProcess_pleaseWait">Please wait…</string>
+    <string name="dialogProcess_registering">Registering…</string>
+    <string name="dialogProcess_loginOut">Login Out…</string>
+    <string name="dialog_emailRegistrationTitle">Kindly register your email address so as to receive important details and get your winnings.</string>
+    <string name="dialog_hint_email">Email</string>
+    <string name="dialog_title_emailRegistration">Email Registration</string>
+    <string name="dialog_error_emailRequired">Email is required</string>
+    <string name="dialog_confirmEmail">Confirm Email?</string>
+
+    <!--LOGIN_AND_SIGNUP ACTIVITY-->
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="logSignup_title_login">LOGIN</string>
+    <string name="logSignup_title_signup">SIGNUP</string>
+    <string name="logSignup_message_error_nameRequired">Name is required</string>
+    <string name="logSignup_message_error_phoneRequired">Mobile no is required</string>
+    <string name="logSignup_message_error_passwordRequired">Password is required</string>
+    <string name="logSignup_dialog_error_title_noLogin">Error! Could not login</string>
+    <string name="logSignup_dialog_confirm_message_confirmReg">Confirm registration details?</string>
+    <string name="logSignup_dialog_error_title_noRegister">Error! Could not register</string>
+    <string name="logSignup_dialog_success_message_regSuccessfull">Registration Successful.</string>
+    <string name="logSignup_layout_global_image_casinoHelper">Image for casino helper</string>
+    <string name="logSignup_layout_mainTabLayout_description">Log and signup tab</string>
+    <string name="logSignup_layout_global_image_welcomeMessage">Welcome Message for login and signup</string>
+    <string name="logSignup_layout_fragLogin_button_loginTitle">LOGIN</string>
+    <string name="logSignup_layout_fragSignup_button_signupTitle">SIGNUP</string>
+    <string name="logSignup_layout_global_hint_password">Password</string>
+    <string name="logSignup_layout_global_hint_mobileNo">Mobile No.</string>
+    <string name="logSignup_layout_global_hint_name">Name</string>
+
+    <!--MAIN_MENU_ACTIVITY-->
+    <string name="title_activity_main_menu">MainMenuActivity</string>
+    <string name="mainMenu_layout_button_walletTitle">Wallet</string>
+    <string name="mainMenu_layout_button_contactTitle">Contact Us</string>
+    <string name="mainMenu_layout_button_policyTitle">Privacy Policy</string>
+    <string name="mainMenu_layout_button_aboutUsTitle">About Us</string>
+    <string name="mainMenu_layout_button_refundTitle">Terms And Conditions</string>
+    <string name="mainMenu_layout_button_logOutTitle">Log Out</string>
+    <string name="mainMenu_layout_button_game_dragonTigerTitle">Dragon Vs Tiger</string>
+    <string name="mainMenu_layout_button_game_slotMachineTitle">SLOT MACHINE</string>
+    <string name="mainMenu_layout_button_game_colorChooserTitle">Color Prediction</string>
+    <string name="mainMenu_layout_button_game_carRouletteTitle">CAR ROULETTE</string>
+    <string name="mainMenu_layout_description_ImageGameToPlay">Title for Main menu</string>
+    <string name="mainMenu_layout_description_dragonTigerImg">Image for dragon vs tiger</string>
+    <string name="mainMenu_layout_description_slotMachineImg">Image for slot machine</string>
+    <string name="mainMenu_layout_description_colorPrediction">Image for color prediction</string>
+    <string name="mainMenu_layout_description_carRoulette">Image for car roulette</string>
+    <string name="mainMenu_dialog_confirm_message_confirmLogOut">Do you wish to log out?</string>
+    <string name="mainMenu_dialog_error_title_noGame">Cannot play the game</string>
+    <string name="mainMenu_dialog_error_content_amountNotEnough">You do not have enough coins. Please recharge</string>
+    <string name="mainMenu_description_backButton">Back Button Img</string>
+    <string name="mainMenu_description_IntentFilter">Img for menu items</string>
+    <string name="mainMenu_description_buttonSettings">Settings Button</string>
+
+    <!--About Us-->
+    <string name="about_us_layout_titleText">About Us</string>
+
+    <!--Contact Us-->
+    <string name="contact_us_layout_titleText">Contact Us</string>
+
+    <!--Privacy Policy-->
+    <string name="privacyPolicy_layout_titleText">Privacy Policy</string>
+
+    <!--Terms and Conditions-->
+    <string name="refund_layout_titleText">Terms And Conditions</string>
+
+    <!--Wallet-->
+    <string name="wallet_layout_titleText">Wallet</string>
+    <string name="wallet_layout_balancePlaceHolder">Current Balance: 0</string>
+    <string name="wallet_title_balanceStart">Current Balance:</string>
+    <string name="wallet_layout_buyCoinLabel">Buy Coins:</string>
+    <string name="wallet_layout_btnAmt50">50</string>
+    <string name="wallet_layout_btnAmt100">100</string>
+    <string name="wallet_layout_btnAmt200">200</string>
+    <string name="wallet_layout_btnAmt500">500</string>
+    <string name="wallet_layout_btnAmt1000">1000</string>
+    <string name="wallet_layout_btnAmt2000">2000</string>
+    <string name="wallet_layout_btnAmt5000">5000</string>
+    <string name="wallet_layout_btnAmt10000">10000</string>
+    <string name="wallet_layout_withdrawCoinLabel">Withdraw Coin:</string>
+    <string name="wallet_layout_hint_amtWithdraw">Amount</string>
+    <string name="wallet_layout_btnWithdrawLabel">Withdraw</string>
+    <string name="wallet_layout_inviteFriendsLabel">Invite your friends to earn free cash:</string>
+    <string name="wallet_layout_inviteLinkLabel"><u>Ways to Invite</u></string>
+    <string name="wallet_dialog_success_title_topUp">Top up successful</string>
+    <string name="wallet_dialog_fail_title_topUp">Top up failed</string>
+    <string name="wallet_dialog_success_message_topUp">You have added {{amt}} coins</string>
+    <string name="wallet_dialog_success_title_claim">Withdrawal successful</string>
+    <string name="wallet_dialog_fail_title_claim">Withdrawal failed</string>
+    <string name="wallet_dialog_fail_title_payment">Error! Payment failed</string>
+    <string name="wallet_dialog_fail_title_sharelink">Share Link Fail</string>
+    <string name="wallet_dialog_fail_title_razorFailed">RazorPay Fail</string>
+    <string name="wallet_dialog_success_message_claim">You have withdrawn {{amt}} coins</string>
+    <string name="wallet_dialog_confirm_topup">Do you wish to top up {{amt}} coins?</string>
+    <string name="wallet_dialog_confirm_claim">Do you wish to withdraw {{amt}} coins?</string>
+    <string name="wallet_dialog_confirm_payoutLink">A payment link has been sent to your email and number. Do you wish to proceed to the link?</string>
+    <string name="wallet_processMsg_topup">Toping up…</string>
+    <string name="wallet_processMsg_withdraw">Withdrawing…</string>
+    <string name="wallet_layout_withdrawField_errMsg_empty">Amount is required</string>
+    <string name="wallet_layout_withdrawField_errMsg_less">Amount is more than you have</string>
+    <string name="wallet_message_invite">Have you tried Royal Casino? Stand a chance of winning upto 10 times your bet. Share and stand a chance to win bonuses. Click on {{link}} to sign up!</string>
+
+
+
+    <!--LOG_TAGS-->
+    <string name="tag_ui_viewmodel_docviewer">DocViewModel</string>
+    <string name="tag_ui_viewmodel_walletactivity">WalletActivityViewModel</string>
+    <string name="tag_ui_viewmodel_walletbodyfragment">WalletBodyFragmentViewModel</string>
+    <string name="tag_ui_viewmodel_mainmenuactivity">MainMenuActivityViewModel</string>
+    <string name="tag_ui_viewmodel_gameviewmodels">GameViewModels</string>
+    <string name="tag_ui_fragment_signupfragment">SignupFragment</string>
+    <string name="tag_ui_fragment_emailregviewmodel">EmailRegistrationViewModel</string>
+    <string name="tag_ui_service_messagenotificationservice">MessageNotificationService</string>
+    <string name="tag_ui_activity_mainactivity">MainActivity</string>
+    <string name="tag_ui_activity_colorselectoractivity">ColorSelectorActivity</string>
+    <string name="tag_ui_fragment_bettingplatformfragment">BettingPlatformFragment</string>
+    <string name="tag_ui_activity_dragonvstigeractivity">DragonVsTigerActivity</string>
+    <string name="tag_ui_activity_carrouletteactivity">CarRouletteActivity</string>
+    <string name="tag_service_gameMusicService">GameMusicService</string>
+    <string name="tag_ui_fragment_gameSelector">GameSelectorFragment</string>
+    <string name="tag_ui_activity_slotmachine">SlotMachineActivity</string>
+    <string name="tag_ui_activity_root_gameactivity">GameActivity</string>
+
+    <!--LOG_MESSAGES-->
+    <string name="LOG_MSG_ERR_createJsonClass">Could not create json class:</string>
+
+    <!--Important_Discarded-->
+    <string name="title_activity_tester">TesterActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="mainMenu_layout_description_hamburgerButton">Hamburger button</string>
+    <string name="mainMenu_layout_description_openImg">Open image</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="noInternet_description">No Internet Signal</string>
+    <string name="noInternet_titleValue">No Internet connection</string>
+    <string name="title_activity_main_test">MainTestActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_dragon_vs_tiger">DragonVsTigerActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_color_selector">ColorSelectorActivity</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+    <string name="header_music">Music</string>
+    <string name="header_sound">Sound</string>
+
+    <!--Key-->
+    <string name="key_music">music</string>
+    <string name="key_sound">sound</string>
+
+    <!--title-->
+    <string name="title_music">Play music in the background</string>
+    <string name="title_sound">Play game sounds</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <string name="game_view_content_description">Game View</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <string name="tag_repository_api">ApiRepository</string>
+    <!--Preferences-->
+    <string name="preference_tokenInfo">pref_tokInfo</string>
+    <string name="tokenInfo_accessToken">acc_tok</string>
+    <string name="tokenInfo_refreshToken">ref_tok</string>
+    <string name="tokenInfo_sub">uname_sub</string>
+    <string name="tokenInfo_userName">uname_tok</string>
+    <string name="tokenInfo_phNumber">uname_ph</string>
+    <string name="tokenInfo_email">uname_email</string>
+    <string name="tokenInfo_razorkey">uname_razkey</string>
+    <string name="preference_importantDetails">pref_importDet</string>
+    <string name="importantDetails_coinAmount">amt_det</string>
+    <string name="importantDetails_doc_onlineServices">doc_onService</string>
+    <string name="importantDetails_doc_aboutUs">doc_AboutUs</string>
+    <string name="importantDetails_doc_privacyPolicy">doc_PrivacyPolicy</string>
+    <string name="importantDetails_doc_termsAndConditions">doc_toc</string>
+    <!--Transaction-->
+    <string name="transaction_claim">claim</string>
+    <string name="transaction_topup">topup</string>
+    <!--Document-Type-->
+    <string name="docType_about_us">about-us</string>
+    <string name="docType_online_services">online-services</string>
+    <string name="docType_privacy_policy">privacy-policy</string>
+    <string name="docType_terms_and_conditions">terms-and-condition</string>
+    <string name="dialog_error_message_noInternet">Ensure you have an internet connection</string>
+
+
+</resources>

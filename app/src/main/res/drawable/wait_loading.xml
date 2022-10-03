@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false">
+    <item android:drawable="@drawable/loading_loop1" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop2" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop3" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop4" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop5" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop6" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop7" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop8" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop9" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop10" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop11" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop12" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop13" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop14" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop15" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop16" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop17" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop18" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop19" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop20" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop21" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop22" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop23" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop24" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop25" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop26" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop27" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop28" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop29" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop30" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop31" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop32" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop33" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop34" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop35" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop36" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop37" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop38" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop39" android:duration="200" />
+    <item android:drawable="@drawable/loading_loop40" android:duration="200" />
+</animation-list>

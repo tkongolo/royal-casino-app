@@ -1,0 +1,211 @@
+<resources>
+
+    <style name="Widget.Theme.Royal_Casino.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Widget.Theme.Royal_Casino.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="SplashScreenTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen_background</item>
+    </style>
+
+    <style name="UserNameCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
+    </style>
+
+    <style name="MenuGameLeftCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_left_card_custom_corners
+        </item>
+    </style>
+
+    <style name="GameSemiBottomCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_bottom_semi_corners</item>
+    </style>
+
+    <style name="GameSemiTopCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_top_semi_corners</item>
+    </style>
+
+    <style name="GameLeftTopCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_left_top_corners</item>
+    </style>
+
+    <style name="GameLeftDragonCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_left_top_bottom_corners</item>
+    </style>
+
+    <style name="GameRightTigerCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_right_top_bottom_corners</item>
+    </style>
+
+    <style name="GameCarRouletteLeftMaseratiCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_car_maserati</item>
+    </style>
+
+    <style name="GameCarRouletteRightPorscheCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_car_porsche</item>
+    </style>
+
+    <style name="GameCarRouletteLeftBMWCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_car_bmw</item>
+    </style>
+
+    <style name="GameCarRouletteRightLandRoverCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_car_landrover</item>
+    </style>
+
+
+    <style name="MenuGameRightCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">
+            @style/ShapeAppearanceOverlay_right_card_custom_corners
+        </item>
+    </style>
+
+    <style name="WalletBalCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">
+            @style/ShapeAppearanceOverlay_right_card_semi_corners
+        </item>
+    </style>
+
+    <style name="ButtonGameLeftButtonStyle" parent="@style/Widget.MaterialComponents.Button">
+        <item name="shapeAppearanceOverlay">
+            @style/ShapeAppearanceOverlay_left_button_custom_corners
+        </item>
+    </style>
+
+    <style name="ButtonGameRightButtonStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">
+            @style/ShapeAppearanceOverlay_right_button_custom_corners
+        </item>
+    </style>
+
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">50dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_left_card_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">50dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_right_card_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">50dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_left_button_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">50dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_right_button_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">50dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_right_card_semi_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">20dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_bottom_semi_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">70dp</item>
+        <item name="cornerSizeBottomLeft">70dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_left_top_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">70dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_top_semi_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">80dp</item>
+        <item name="cornerSizeTopLeft">80dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_left_top_bottom_corners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">50dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">50dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_right_top_bottom_corners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">50dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">50dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_car_maserati">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">5dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_car_porsche">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">5dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_car_bmw">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">80dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_car_landrover">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">80dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+</resources>

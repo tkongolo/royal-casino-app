@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color_selector"
+    android:theme="@style/ThemeOverlay.Royal_Casino.FullscreenContainer"
+    tools:context=".Games.ColorSelector.ColorSelectorActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/topMaterialCard"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/GameSemiBottomCardViewStyle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:cardBackgroundColor="@color/backgroundInfo_color_selector"
+            app:layout_constraintHeight_percent="0.17">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/availableBalanceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:text="@string/color_selector_layout_title_availableBalance"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/gamerBalanceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/availableBalanceText"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:text="@string/color_selector_layout_testAmount"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/bettingAmountText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:text="@string/color_selector_layout_testBetAmount"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRecharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:backgroundTint="@color/button_wallet_grey"
+                    app:cornerRadius="30dp"
+                    android:textSize="11sp"
+                    android:text="@string/color_selector_layout_btn_recharge"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRules"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/btnRecharge"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:backgroundTint="@color/card_stroke_walletBal"
+                    app:cornerRadius="30dp"
+                    android:textSize="11sp"
+                    android:text="@string/color_selector_layout_btn_rules"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/betingConstraintSection"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/topMaterialCard"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHeight_percent="0.15">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/game_backButton_description"
+                android:scaleType="fitXY"
+                android:rotation="270"
+                android:backgroundTint="@android:color/transparent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:srcCompat="@drawable/ic_game_back_button"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintWidth_percent="0.75">
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/bettingPlatformFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/colorSelectorSection"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/betingConstraintSection"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHeight_percent="0.25">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_choose_green"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_percent="0.25"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/btn_choose_violet"
+                android:backgroundTint="@color/green"
+                android:textColor="@color/black"
+                app:cornerRadius="30dp"
+                android:text="@string/color_selector_layout_btn_greenButton"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_choose_violet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_percent="0.25"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/btn_choose_green"
+                app:layout_constraintRight_toLeftOf="@id/btn_choose_red"
+                android:backgroundTint="@color/violet"
+                android:textColor="@color/black"
+                app:cornerRadius="30dp"
+                android:text="@string/color_selector_layout_btn_violetButton"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_choose_red"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_percent="0.25"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/btn_choose_violet"
+                app:layout_constraintRight_toRightOf="parent"
+                android:backgroundTint="@color/red"
+                android:textColor="@color/black"
+                app:cornerRadius="30dp"
+                android:text="@string/color_selector_layout_btn_redButton"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/btn_choose_green"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnChoose1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/btnChoose2"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    android:text="@string/color_selector_layout_btn1"
+                    app:cornerRadius="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnChoose2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/btnChoose1"
+                    app:layout_constraintRight_toLeftOf="@+id/btnChoose3"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    android:text="@string/color_selector_layout_btn2"
+                    app:cornerRadius="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnChoose3"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/btnChoose2"
+                    app:layout_constraintRight_toLeftOf="@+id/btnChoose4"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    android:text="@string/color_selector_layout_btn3"
+                    app:cornerRadius="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnChoose4"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/btnChoose3"
+                    app:layout_constraintRight_toLeftOf="@+id/btnChoose5"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    app:cornerRadius="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/color_selector_layout_btn4"
+                    android:textSize="14sp"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnChoose5"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/btnChoose4"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    android:text="@string/color_selector_layout_btn5"
+                    app:cornerRadius="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnChoose6"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/btnChoose1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/btnChoose7"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    android:text="@string/color_selector_layout_btn6"
+                    app:cornerRadius="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnChoose7"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/btnChoose2"
+                    app:layout_constraintLeft_toRightOf="@id/btnChoose6"
+                    app:layout_constraintRight_toLeftOf="@+id/btnChoose8"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    android:text="@string/color_selector_layout_btn7"
+                    app:cornerRadius="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnChoose8"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/btnChoose3"
+                    app:layout_constraintLeft_toRightOf="@id/btnChoose7"
+                    app:layout_constraintRight_toLeftOf="@+id/btnChoose9"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    android:text="@string/color_selector_layout_btn8"
+                    app:cornerRadius="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnChoose9"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/btnChoose4"
+                    app:layout_constraintLeft_toRightOf="@id/btnChoose8"
+                    app:layout_constraintRight_toLeftOf="@+id/btnChoose0"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    android:text="@string/color_selector_layout_btn9"
+                    app:cornerRadius="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnChoose0"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/btnChoose5"
+                    app:layout_constraintLeft_toRightOf="@id/btnChoose9"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    android:text="@string/color_selector_layout_btn0"
+                    app:cornerRadius="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/colorSelectorSection"
+            app:layout_constraintBottom_toBottomOf="parent"
+            style="@style/GameLeftTopCardViewStyle"
+            app:cardBackgroundColor="@color/backgroundInfo_color_selector">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/vgl1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.45" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/vgl2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.7" />
+
+                <TextView
+                    android:id="@+id/periodTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:text="@string/color_selector_layout_title_Period"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/selectionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/vgl1"
+                    app:layout_constraintRight_toLeftOf="@id/vgl2"
+                    android:layout_marginRight="30dp"
+                    android:text="@string/color_selector_layout_title_Selection"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/resultTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/vgl2"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:text="@string/color_selector_layout_title_Result"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/resultRecyclerView"
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toBottomOf="@id/resultTitle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_height="0dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
